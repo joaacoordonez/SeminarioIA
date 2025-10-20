@@ -1,0 +1,56 @@
+/* Estilos para la página de Registro */
+.pagina-registro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.pagina-registro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.pagina-registro p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Animación de entrada */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pagina-registro .formulario-registro {
+  animation: slideInFromBottom 0.7s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pagina-registro h1 {
+    font-size: 2.5rem;
+  }
+
+  .pagina-registro p {
+    font-size: 1rem;
+  }
+}

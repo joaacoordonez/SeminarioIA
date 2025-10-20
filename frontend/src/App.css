@@ -1,42 +1,53 @@
+/* Estilos principales de la aplicación */
 #root {
-  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background: var(--bg-primary);
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Utilidades adicionales */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 1rem;
+}
+
+.text-center {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@keyframes logo-spin {
+/* Animaciones globales */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

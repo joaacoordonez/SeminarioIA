@@ -1,0 +1,75 @@
+/* Estilos para la página de Chat */
+.pagina-chat {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-chat header {
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.pagina-chat header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.pagina-chat h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.pagina-chat .btn {
+  background: linear-gradient(135deg, var(--secondary-color), #475569);
+  color: var(--text-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pagina-chat .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.contenido-chat {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pagina-chat header .container {
+    padding: 0 1rem;
+  }
+
+  .pagina-chat h1 {
+    font-size: 1.75rem;
+  }
+
+  .contenido-chat {
+    padding: 1rem;
+  }
+}
